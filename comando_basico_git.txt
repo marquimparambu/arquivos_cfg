@@ -1,0 +1,52 @@
+PASSO A PASSO
+git init    				# Inicializa repositório
+git config --local user.name Author  	# configuração local seu_nome
+git config --global user.name Author	# configuração global seu_nome
+git config --local user.email email    	# configuração local seu_email
+git config --global user.email email	# configuração global seu_email
+git config --local core.editor vim	# configuração local editor de codigo padrão para o git
+git config --global core.editor vim	# configuração global editor de codigo padrão para o git
+git config --global merge.tool vimdiff	# diffs merges
+git status				# Estado atual
+ls
+git add nome_arquivo			# Estagio preparação para commit
+git rm --cached nome_arquivo		# remover o arquivo do stage atual
+ls
+git status				# Para ver estado atual
+git commit -m "uma legenda"		# confirma e -m é para uma mensagem descritiva sobre o commit
+git status				# roda novamente para ver o estado atual
+git log					# Lendo o histórico do git
+ls
+git checkout -b nome_da_branch		# com o parametro -b cria uma branch e muda para ela
+git checkout nome_da_branch		# troca de uma branch para outra
+git checkout hash(id)			# pode ser usado para reverter para uma versão anterior.
+git log					# Lendo o histórico do git
+git log --oneline			# Histórico somente commit sem detalhes
+ls
+git checkout master			# Mudar para branch master
+git log --oneline			# Histórico somente commit sem detalhes
+ls
+git merge nome_branch			# junta a branch ativa com a branch especificada.
+git log --oneline			# Histórico somente commit sem detalhes
+ls
+git branch				# Mostra lista as branchs o * mostra qual está ativa
+git branch -d nome_da_branch		# Deleta branch especificada
+git log					# Para pegar o hash do commit
+git revert 7_primeiros_numeros		# Reverte para o estado anterior será aberto nosso editor de texto
+git log
+ls
+MODIFICAR UM TRABALHO ANTES DO COMMIT com git checkout
+Exemplo
+echo "Nova Linha" >> nome_do_arquivo
+cat nome_do_arquivo
+com git status mostrará que foi modificado
+com git checkout -- nome_do_arquivo ou
+com git restore -- nome_do_arquivo Para desfazer
+Também faria a mesma coisa
+git checkout master ou git checkout
+
+git remote set-url nome_user url	# Adicionar o caminho do servidor
+git remote -v				# Lista caminhso do servidor
+
+
+
