@@ -1,0 +1,61 @@
+PASSO A PASSO git
+
+git --version   # Exibe a versão do git
+
+
+ARQUIVO DE CONFIGURAÇÃO:
+as configurações são de sistema, global e local
+--sistema para toda a maquina
+--global para o suário da maquina
+--local para o diretorio atual
+
+git config --global user.name Author            # Configura nome do autor
+git config --global user.email email            # Configura o email da conta git
+git config --global core.editor 'code --wait'   # vscode --wait mantem o terminal
+git config --global merge.tool vimdiff          # neste caso é o vim
+===============================================================================
+
+
+
+
+COMESSANDO UM NOVO TRABALHO
+git init                        # Inicializa o repositório
+git add nome_arquivo            # Estagio preparação para commit
+git rm --cached nome_arquivo    # remover o arquivo do estagio atual
+git status                      # Mostra o estado atual.
+git commit -m "uma legenda"		# confirma e -m uma mensagem descritiva sobre o commit
+git log                         # Leitura do histórico hash(id) do commit
+MODIFICAÇÕES:
+git checkout -b nome_da_branch  # com o parametro -b cria uma branch e muda para ela
+git checkout nome_da_branch		# troca de uma branch para outra
+git checkout master             # Mudar para branch master
+git log --oneline               # Histórico somente 7 primeiros hash(id) commit sem detalhes
+git checkout hash(id)			# pode ser usado para reverter para uma versão anterior.
+git revert hash(id)             # Reverte para o estado anterior será aberto nosso editor de texto
+git merge nome_branch			# junta a branch ativa com a branch especificada.
+git branch                      # Lista as branchs o * aponta qual está ativa
+git branch -d nome_da_branch    # Deleta branch especificada
+MODIFICAR UM TRABALHO ANTES DO COMMIT:
+git checkout -- nome_do_arquivo # Faça após modificar o arquivo.
+git restore -- nome_do_arquivo  # Faça após modificar o arquivo.
+git checkout master             # Faria a mesma coisa.
+git checkout                    # Faria a mesma coisa.
+===============================================================================
+
+
+
+
+TRABALHO COM SERVIDOR REMOTO:
+git remote add origin url       # Adicionar o repositório especicado na url 
+                                # origin ou upstream é o nome padrão.
+git remote -v                   # Verifica repositórios remoto.
+git remote set-url origin url	# O comando altera uma URL de repositório remoto existente.
+ALTERA URL SSH PARA HTTPS:
+git remote set-url origin url_https
+ALTERA URL HTTPS PARA SSH:
+git remote set-url origin url_ssh
+RENOMEANDO O REPOSITÓRIO REMOTO CLONADOS:
+git remote rename origin destination
+REMOVENDO REPOSITÓRIO REMOTO CLONADO:
+git remote rm destination
+===============================================================================

@@ -45,8 +45,13 @@ com git restore -- nome_do_arquivo Para desfazer
 Também faria a mesma coisa
 git checkout master ou git checkout
 
+
+git remote set-url nome_user url	# Adicionar o caminho do servidor
+git remote set-url nome_user url	# Adicionar o caminho do servidor
+git remote set-url nome_user url	# Adicionar o caminho do servidor
 git remote set-url nome_user url	# Adicionar o caminho do servidor
 git remote -v				# Lista caminhso do servidor
+
 
 
 
