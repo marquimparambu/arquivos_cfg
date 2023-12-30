@@ -50,6 +50,7 @@ git remote add origin url       # Adicionar o repositório especicado na url
                                 # origin ou upstream é o nome padrão.
 git remote -v                   # Verifica repositórios remoto.
 git remote set-url origin url	# O comando altera uma URL de repositório remoto existente.
+git push REMOTE-NAME BRANCH-NAME # Enviar para o servidor
 ALTERA URL SSH PARA HTTPS:
 git remote set-url origin url_https
 ALTERA URL HTTPS PARA SSH:
